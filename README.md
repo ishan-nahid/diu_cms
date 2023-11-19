@@ -46,12 +46,19 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
    ```
    cd diucms
    ```
-5. Run migrations:
+
+5. Make sure to setup database
+   ```
+   "NAME": "diucmsdb",
+   "HOST": "localhost",
+   "PORT": "5432",
+   ```
+6. Run migrations:
    ```
    python manage.py makemigrations
    python manage.py migrate
    ```
-6. Start the development server:
+7. Start the development server:
    ```
    python manage.py runserver
    ```
