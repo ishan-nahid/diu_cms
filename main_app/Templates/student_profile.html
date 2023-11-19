@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'student_profile.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div style="display: flex; align-items: center;">
+            <img src="{% static 'diu-logo.png' %}" alt="">
+            <h1>Student Counselling Management System</h1>
+        </div>
+        <div>
+            <a href="http://localhost:8000/"><button type="Logout">Logout</button></a>
+        </div>
+    </nav>
+
+    <center>
+        <div class="container">
+            <div class="student_profile">
+                <h1 style="font-size: 60px; color:#04aa6d" ;>Student Profile</h1>
+                <br>
+                <img src="{% static 'user.png' %}" alt="">
+
+                <h1 style="font-size: 24px; margin-bottom: 5px;">{{user.first_name}} {{user.last_name}}</h1>
+                <p>ID: {{user.user_id }}</p>
+            </div>
+
+
+            <div class="middle_container1">
+                <div class="counselling_img">
+                    <img src="{% static 'counselling.jpg' %}" alt="">
+                </div>
+
+                <div class="student_counselling">
+                    <h1 style="font-size: 60px; margin-top: -50px; margin-bottom: 20px; color:#04aa6d">My Counselling
+                        History</h1>
+                    <table>
+                        <tr>
+                            <th>FACULTY ID</th>
+                            <th>MASSAGE</th>
+                            <th>DAY</th>
+                            <th>SLOT</th>
+                            <th>STATUS</th>
+                        </tr>
+                        {% for m in massage %}
+                        <tr>
+                            <td>{{ m.faculty_id_id }}</td>
+                            <td>{{ m.massage }}</td>
+                            <td>{{ m.weekday }}</td>
+                            <td>{{ m.slot }}</td>
+                            <td>{% if m.approve == "True" %}Approved{% elif m.approve == "False" %}Declined{% else %}Pending{% endif %}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+
+                </div>
+            </div>
+
+
+            <div class="middle_container2">
+                <div class="counselling_time">
+                    <h1 style="font-size: 60px; color:#04aa6d; margin-top: -50px; margin-bottom: 20px;">Faculty
+                        Counselling Hour</h1>
+                    <form action="{% url 'find_schedule' %}" class="checkScheduleForm" method="post">
+                        {% csrf_token %}
+
+
+                        <input type="text" placeholder="Enter Faculty ID" name="faculty_id" required><br>
+                        <button type="submit">Find</button>
+
+                        <br>
+                        <br>
+                        <h3>
+                            {{info.first_name}} {{info.last_name}}
+
+                        </h3>
+                        <h4>{{info.user_id}}</h4>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>Day</th>
+                                <th>08:30 AM</th>
+                                <th>09:45 AM</th>
+                                <th>11:00 AM</th>
+                                <th>12:15 PM</th>
+                                <th>01:30 PM</th>
+                                <th>02:45 PM</th>
+                                <th>04:00 PM</th>
+                            </tr>
+                            </tr>
+                            {% for sch in schedule %}
+                            <tr>
+                                <td>{{sch.weekday }}</td>
+                                <td>{% if sch.slot1 %}Available{% else %}Not Available{% endif %}</td>
+                                <td>{% if sch.slot2 %}Available{% else %}Not Available{% endif %}</td>
+                                <td>{% if sch.slot3 %}Available{% else %}Not Available{% endif %}</td>
+                                <td>{% if sch.slot4 %}Available{% else %}Not Available{% endif %}</td>
+                                <td>{% if sch.slot5 %}Available{% else %}Not Available{% endif %}</td>
+                                <td>{% if sch.slot6 %}Available{% else %}Not Available{% endif %}</td>
+                                <td>{% if sch.slot7 %}Available{% else %}Not Available{% endif %}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </form>
+                </div>
+
+                <div class="find_img">
+                    <img src="{% static 'find.jpg' %}" alt="">
+                </div>
+            </div>
+
+
+
+            <h1 style="font-size: 60px; margin-top: 40px; padding: 10px; color:#04aa6d" class="title">Counselling
+                Request Form</h1>
+            <div class="forms">
+                <form action="{% url 'request_slot' %}" class="request_counselling" method="post">
+                    <div>
+                        {% csrf_token %}
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter Faculty ID" name="faculty_id" required>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter Your reasons" name="massage" required>
+                        </div>
+
+                        <div class="input-box">
+                            <select name='weekday' id="weekday" required>
+                                <option value="">Select Weekday</option>
+                                <option value="saturday">Saturday</option>
+                                <option value="sunday">Sunday</option>
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-box">
+                            <select name='slot' id="slot" required>
+                                <option value="">Select Slot</option>
+                                <option value="08.30 AM">08:30 AM</option>
+                                <option value="09:45 AM">09:45AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:15 PM">12:15 PM</option>
+                                <option value="01:30 PM">01:30 PM</option>
+                                <option value="02:45 PM">02:45 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="submit">Request Slot</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </center>
+
+    <footer>
+        <center>
+            &copy; Copyright 2023, Student Counselling Management System
+        </center>
+    </footer>
+
+
+</body>
+
+</html>

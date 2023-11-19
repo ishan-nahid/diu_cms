@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 80px; 
+  height: 100px;
+  background-color: rgb(209, 231, 250);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; 
+}
+  
+  .navbar img {
+    height: 60px;
+    padding-right: 20px;
+  }
+  
+  .navbar h1 {
+    color: black;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+  }
+  
+  .navbar button {
+    margin: 0 auto;
+    border: none;
+    width: 150px;
+    height: 35px;
+    background: #04aa6d;
+    border-radius: 4px;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .navbar button:hover {
+    margin: 0 auto;
+    border: none;
+    width: 150px;
+    height: 35px;
+    background: white;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: #04aa6d;
+    font-weight: 800;
+  }
+  
+  .faculty_profile {
+    padding: 20px 0;
+  }
+  
+  .faculty_profile img {
+    height: 150px;
+    border: 2px solid #dfdfdf;
+    border-radius: 50%;
+  }
+  /* //////////////////// */
+  .middle_container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 100px;
+    background-color: #e0f6ff;
+  }
+  
+  .counselling_img img,
+  .find_img img {
+    width: 852px;
+    height: 500px;
+  }
+  
+  .faculty_counselling,
+  .counselling_time {
+    padding: 30px;
+  }
+  
+  .faculty_counselling table,
+  .counselling_time table {
+    width: 780px;
+  }
+  
+  .faculty_counselling table,
+  .faculty_counselling td,
+  .faculty_counselling th,
+  .faculty_counselling tr {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+  }
+  
+  .faculty_counselling table tr td,
+  .counselling_time table tr td {
+    padding: 5px;
+  }
+  
+  .counselling_time table,
+  .counselling_time td,
+  .counselling_time th,
+  .counselling_time tr {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+  }
+  
+  .faculty_counselling th,
+  .counselling_time th {
+    font-size: 16px;
+  }
+  
+  .middle_container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -4px 100px;
+    background-color: #e0f6ff;
+  }
+  
+  .forms {
+    margin-top: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    background-color: #e0f6ff;
+    padding: 50px 10px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    position: relative;
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: black;
+  }
+  
+  .edit_counselling table {
+    width: 700px;
+  }
+  .edit_counselling select {
+    height: 35px;
+    width: 700px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .edit_counselling input {
+    border: none;
+    font-size: 14px;
+  }
+  
+  button {
+    margin: 0 auto;
+    color: #fff;
+    border: none;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    background: #04aa6d;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .forms button:hover {
+    margin: 0 auto;
+    color: #04aa6d;
+    font-weight: 800;
+    border: none;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    background: white;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  footer {
+    margin-top: 20px;
+    padding: 0px 80px;
+    height: 60px;
+    background-color: rgb(209, 231, 250);
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+  

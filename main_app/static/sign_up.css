@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        0deg,
+        rgba(33, 24, 54, 0.616),
+        rgba(33, 24, 54, 0.658)
+      ),
+      url("back-cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px 30px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container .cover img {
+    display: block;
+    margin-top: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+  
+  .container .cover h1 {
+    color: #044ca3;
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.2em;
+  }
+  
+  .container .cover {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container .forms {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .forms .login-form {
+    width: calc(100% / 2 - 25px);
+  }
+  
+  .title {
+    position: relative;
+    font-size: 35px;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .title:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 65px;
+    background: #029861;
+  }
+  
+  .forms .input-boxes {
+    margin-top: 40px;
+  }
+  
+  .forms .input-box {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .forms .input-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0 30px;
+    font-size: 14px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .forms .input-box i {
+    position: absolute;
+    color: #04aa6d;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .forms .input-box select {
+    border: none;
+    width: 500px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  
+  .forms .text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .forms .text a {
+    color: #04aa6d;
+    text-decoration: none;
+  }
+  
+  .forms .text a:hover {
+    text-decoration: underline;
+  }
+  
+  .forms button {
+    margin: 0 auto;
+    color: #fff;
+    border: none;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    background: #04aa6d;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .forms button:hover {
+    margin: 0 auto;
+    color: #04aa6d;
+    font-weight: 800;
+    border: none;
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    background: white;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .forms .sign-up-text {
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  @media (max-width: 730px) {
+    .container .cover {
+      display: none;
+    }
+    .forms .login-form,
+    .forms .signup-form {
+      width: 100%;
+    }
+    .forms.signup-form {
+      display: none;
+    }
+    .container #flip:checked ~ .forms .signup-form {
+      display: block;
+    }
+    .container #flip:checked ~ .forms .login-form {
+      display: none;
+    }
+  }
+  

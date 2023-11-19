@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Sign_up.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="cover">
+            <div>
+                <div><img src="{% static 'diu-logo.png' %}" alt=""></div>
+            </div>
+            <div>
+                <h1>STUDENT COUNSELING MANAGEMENT SYSTEM</h1>
+            </div>
+        </div>
+
+        <div class="forms">
+            <div class="login-form">
+                <div class="title">Sign Up</div>
+                <form action="#" class="reg_form" method="post">
+                    {% csrf_token %}
+                    <div class="input-boxes">
+
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Enter First Name" name="first_name" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Enter Last Name" name="last_name" required>
+                        </div>
+
+                        <div class="input-box">
+                            <i class="fas fa-graduation-cap"></i>
+                            <input type="text" placeholder="Enter Depertment Name" name="depertment" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-id-badge"></i>
+                            <input type="text" placeholder="Enter Your ID" name="user_id" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Enter Your E-mail" name="email" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Enter Your Password" name="password" required>
+                        </div>
+
+                        <div class="input-box">
+                            <select name='role' id="role" required>
+                                <option value="">Select role as</option>
+                                <option value="faculty">Faculty</option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <button type="submit">Sign Up</button>
+                        </div>
+
+                        <div class="text sign-up-text">Already have an account? <a
+                                href="http://localhost:8000/login/">Login Now</a>
+                        </div>
+                    </div>
+                    <!-- <table>
+                        <tr>
+                            <td> <label for="first_name">First Name</label> </td>
+                            <td> <input type="text" placeholder="Enter First Name" name="first_name" required> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="last_name">Last Name</label> </td>
+                            <td> <input type="text" placeholder="Enter Last Name" name="last_name" required> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="depertment">Depertment</label> </td>
+                            <td> <input type="text" placeholder="Enter Depertment Name" name="depertment" required> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="user_id">ID</label> </td>
+                            <td> <input type="text" placeholder="Enter Your ID" name="user_id" required> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="email">E-Mail</label> </td>
+                            <td> <input type="text" placeholder="Enter Your E-mail" name="email" required> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="password">Password</label> </td>
+                            <td> <input type="password" placeholder="Enter Your Password" name="password" required> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for='role'>Role</label> </td>
+                            <td>
+                              <input type='radio' name='role' value='student' required> <label>Student</label>
+                              <input type='radio' name='role' value='faculty' required> <label>Faculty</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="submit">Sign UP</button>
+                                Have an account? <a href="http://localhost:8000/login/">Login</a>
+                            </td>
+                        </tr>
+                    </table> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
