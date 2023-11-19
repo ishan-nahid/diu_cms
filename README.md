@@ -13,7 +13,7 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 
 ## Status
 
-![Static Badge](https://img.shields.io/badge/Repo%20Size-13%20MB-brightgreen)
+![Static Badge](https://img.shields.io/badge/Repo%20Size-13%12.16MB-brightgreen)
 ![Static Badge](https://img.shields.io/badge/License-CC%20BY%20NC%204.0-blue)
 ![GitHub Repo stars](https://img.shields.io/github/stars/ishan-nahid/diu__cms)
 
