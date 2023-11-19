@@ -12,51 +12,106 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 
 ## Status
 
+![Static Badge](https://img.shields.io/badge/Repo%20Size-13%20MB-brightgreen)
+![Static Badge](https://img.shields.io/badge/License-CC%20BY%20NC%204.0-blue)
+![GitHub Repo stars](https://img.shields.io/github/stars/ishan-nahid/diu__cms)
+
+
 ## Technologies
 
 | <p align="center">Front End</p> | <p align="center">Back End</p> | <p align="center">Databse</p>
 | :------------- | :-------------: | -------------: |
 | ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) | ![DJANGO](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) | ![POSTGRESQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) | 
 
-## Project Setup
+## Setup
 1. Initialize the virtual environment:
-   ```bash
+   ```
    python -m venv virtenv
    ```
 2. Activate the virtual environment: 
    - On Windows:
-   ```bash
+   ```
    virtenv\Scripts\activate.bat
    ```
    - On macOS/Linux:
-   ```bash
+   ```
    source virtenv/bin/activate
    ```
 
 3. Install Django and other required packages:
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 4. Navigate to the project folder:
-   ```bash
+   ```
    cd diucms
    ```
 5. Run migrations:
-   ```bash
+   ```
    python manage.py makemigrations
    python manage.py migrate
    ```
 6. Start the development server:
-   ```bash
+   ```
    python manage.py runserver
    ```
   
 
+## Contribution:
+- Fork the repo to your Github.<br/>
+
+- Clone the Forked Repository to your local machine.
+	```
+	git clone https://github.com/<username>/diu_cms
+	```
+- Change the directory to NSCC-BPIT-Website.
+	```
+	cd diucms
+	```
+- Add remote to the Original Repository.
+	```
+	git remote add upstream https://github.com/ishan-nahid/diu_cms
+	```
+- Check the remotes for this repository.
+        ```
+        git remote -v
+        ```
+- Always take a pull from the upstream repository to your master branch to keep it at par with the main project(updated repository).
+        ```
+        git pull upstream main
+        ```
+- Create a new branch.
+        ```
+        git checkout -b <your_branch_name>
+        ```
+- Perform your desired changes to the code base.
+- Track your changes:heavy_check_mark: .
+        ```
+        git add . 
+        ```
+- Commit your changes .
+        ```
+        git commit -m "Relevant message"
+        ```
+- Push the committed changes in your feature branch to your remote repo.
+        ```
+        git push -u origin <your_branch_name>
+        ```
+- To create a pull request, click on `compare and pull requests`. Please ensure you compare your feature branch to the desired branch of the repository you are supposed to make a PR to.
+
+- Add appropriate title and description to your pull request explaining your changes and efforts done.
 
 
+- Click on `Create Pull Request`.
 
 
+- Voila! You have made a PR to this repo. Sit back patiently and relax while your PR is reviewed
+
+	
+
+
+##
 
 <div align="center">
-<h3>Show some ❤️ by starring this awesome repository!</h3>
+   <h3>Show some ❤️ by starring this awesome repository!</h3>
 </div>
