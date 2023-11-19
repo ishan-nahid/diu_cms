@@ -6,6 +6,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Contribution](#contribution)
+* [Contributors](#contributors)
 
 ## Introduction
 This project, DIUCMS (DIU Counseling Management System), is a Django-based web application for managing counseling sessions. The project includes a superuser account for administrative purposes and uses PostgreSQL as the database.
@@ -116,6 +117,8 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 
 	
 
+## Contributors
+[![contributors](https://contrib.rocks/image?repo=ishan-nahid/diu_cms)](https://github.com/ishan-nahid/diu_cms/graphs/contributors)
 
 ##
 
