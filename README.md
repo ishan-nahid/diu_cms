@@ -72,7 +72,7 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 	```
 	git clone https://github.com/<username>/diu_cms
 	```
-- Change the directory to NSCC-BPIT-Website.
+- Change the directory to diucms (if not in it).
 	```
 	cd diucms
 	```
