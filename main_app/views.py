@@ -1,4 +1,3 @@
-
 import bcrypt
 from django.shortcuts import render, redirect
 from .forms import User_form, LoginForm, BookingForm, counsellingHourForm, checkScheduleForm
@@ -15,6 +14,8 @@ def register_user(request):
 
         if form.is_valid():
             new_user = form.save(commit=False)
+            
+            
             new_user.save()
 
             try:
@@ -93,10 +94,11 @@ def profile(request):
         return render(request, 'welcome.html')
 
 def find_schedule(request):
-    if request.method == 'POST':
-        form = checkScheduleForm(request.POST)
+    if request.session.get('authenticated'):
+        if request.method == 'POST':
+            form = checkScheduleForm(request.POST)
 
-        if request.session.get('authenticated'):
+        
             user_id = request.session.get('user_id')
             user = User.objects.get(user_id=user_id)
 
@@ -114,20 +116,28 @@ def find_schedule(request):
                 order_of_days = ['saturday', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday']
 
                 filtered_schedule = {k: v for k, v in latest_schedule.items() if k.lower() in order_of_days}
-
-                sorted_schedule = sorted(filtered_schedule.items(), key=lambda x: order_of_days.index(x[0].lower()))
+                latest_schedule = {k: v for k, v in filtered_schedule.items() if v.on}
+                
+                sorted_schedule = sorted(latest_schedule.items(), key=lambda x: order_of_days.index(x[0].lower()))
 
                 updated_schedule = dict(sorted_schedule)
 
                 return render(request, 'student_profile.html', {'form': form, 'user': user, 'schedule': updated_schedule.values(), 'info': info, 'massage': messages_of_students})
-
-    return render(request, 'profile.html', {'form': form})
-
+        else:
+            print("not ")
+            return redirect('profile')
+            # form = checkScheduleForm()
+            # return render(request, 'profile.html', {'form': form})
+    else:
+        print("not authen")
+        return render(request, 'welcome.html')
+    
 def request_slot(request):
-    if request.method == "POST":
-        form = BookingForm(request.POST)
+    if request.session.get('authenticated'):
+        if request.method == "POST":
+            form = BookingForm(request.POST)
 
-        if request.session.get('authenticated'):
+        
             user_id = request.session.get('user_id')
             user_role = request.session.get('role')
             
@@ -154,36 +164,40 @@ def request_slot(request):
                     print("Only students can request slots.")
                 
             else:
-                print("User not found.")
+                print("User not authenticated.")
+                return redirect('user_login')
         else:
-            print("User not authenticated.")
-            return redirect('user_login')
+            form = BookingForm()
+            return render(request, 'profile.html', {'form': form})
+            
     else:
-        form = BookingForm()
-
-    return render(request, 'profile.html', {'form': form})
+        return render(request, 'welcome.html')
 
 def update_approve(request):
-    if request.method == "POST":
-        booking_id = request.POST.get('booking_id')
-        try:
-            booking = Booking.objects.get(massage_id=booking_id)
-            if booking.approve == 'Pending':
-                booking.approve = 'True'
-            elif booking.approve == 'True':
-                booking.approve = 'False'
-            else:
-                booking.approve = 'Pending'
-            booking.save()
-        except Booking.DoesNotExist:
-            return redirect('student_profile')
-    return redirect('profile')
+    if request.session.get('authenticated'):
+        if request.method == "POST":
+            booking_id = request.POST.get('booking_id')
+            try:
+                booking = Booking.objects.get(massage_id=booking_id)
+                if booking.approve == 'Pending':
+                    booking.approve = 'True'
+                elif booking.approve == 'True':
+                    booking.approve = 'False'
+                else:
+                    booking.approve = 'Pending'
+                booking.save()
+            except Booking.DoesNotExist:
+                return redirect('student_profile')
+        return redirect('profile')
+    else:
+        return render(request, 'welcome.html')
 
 def edit_counselling_hour(request):
-    if request.method == 'POST':
-        form = counsellingHourForm(request.POST)
+    if request.session.get('authenticated'):
+        if request.method == 'POST':
+            form = counsellingHourForm(request.POST)
 
-        if request.session.get('authenticated'):
+        
             user_id = request.session.get('user_id')
             user = User.objects.get(user_id=user_id)
 
@@ -198,21 +212,24 @@ def edit_counselling_hour(request):
                 return redirect('profile')
 
         else:
-            return redirect('user_login')
+            form = counsellingHourForm()
+            return render(request, 'profile.html', {'form': form})
     else:
-        form = counsellingHourForm()
-        
-    return render(request, 'profile.html', {'form': form})
+        return render(request, 'welcome.html')
 
 def delete_slot(request):
-    if request.method == 'POST':
-        if request.session.get('authenticated'):
+    if request.session.get('authenticated'):
+        if request.method == 'POST':
             slot_id = request.POST.get('slot_id')
 
             slot = Counselling_Hour.objects.get(slot_id=slot_id)
             print(slot)
             slot.on = not slot.on
             slot.save()
-
-    return redirect('profile')
+            return redirect('profile')
+        else:
+            return render(request, 'welcome.html')
+    else:
+        return render(request, 'welcome.html')
+    
 
