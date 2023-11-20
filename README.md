@@ -115,10 +115,27 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 
 - Voila! You have made a PR to this repo. Sit back patiently and relax while your PR is reviewed
 
-	
+
+<!--
+## Contributors
+<div>
+<h1 align="center">
+ <b>Thanks to these amazing people
+<h1>
+<a href="https://github.com/ishan-nahid/diu_cms/contributors">
+  <img src="https://contrib.rocks/image?repo=ishan-nahid/diu_cms&&max=817" />
+</a>
+</div>	-->
 
 ## Contributors
-[![contributors](https://contrib.rocks/image?repo=ishan-nahid/diu_cms)](https://github.com/ishan-nahid/diu_cms/graphs/contributors)
+<!-- [![contributors](https://contrib.rocks/image?repo=ishan-nahid/diu_cms)](https://github.com/ishan-nahid/diu_cms/graphs/contributors) -->
+<!-- [![](https://opencollective.com/ishan-nahid/diu_cms/contributors.svg?width=890&button=false)](https://github.com/ishan-nahid/diu_cms/graphs/contributors) -->
+[![ISHAN AHMAD](https://github.com/ishan-nahid.png?size=70)](https://github.com/ishan-nahid)
+[![ATIQUE SHAHRIAR](https://github.com/atiqueshahriar.png?size=70)](https://github.com/atiqueshahriar)
+[![Faiyaz Rafid](https://github.com/faiyaz666.png?size=70)](https://github.com/faiyaz666)
+[![MK Rashmi](https://github.com/mahjabin-rashmi.png?size=70)](https://github.com/mahjabin-rashmi)
+[![Shreya](https://github.com/shreya-14489.png?size=70)](https://github.com/shreya-14489)
+
 
 ##
 
