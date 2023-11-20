@@ -119,9 +119,7 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 
 ## Contributors
 [![contributors](https://contrib.rocks/image?repo=ishan-nahid/diu_cms)](https://github.com/ishan-nahid/diu_cms/graphs/contributors)
-<a href="https://github.com/ishan-nahid/diu_cms/contributors">
-  <img src="https://contrib.rocks/image?repo=ishan-nahid/diu_cms" />
-</a>
+
 ##
 
 <div align="center">
