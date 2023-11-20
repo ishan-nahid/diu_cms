@@ -30,8 +30,7 @@ class User(models.Model):
         passwordd = bcrypt.hashpw(password_bytes, bcrypt.gensalt())
         self.password = passwordd.decode('utf-8')
         super().save(*args, **kwargs)
-
-    
+  
 class Booking(models.Model):
     massage_id = models.AutoField(primary_key=True)
     student_id = models.CharField(max_length=100)
