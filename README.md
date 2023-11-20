@@ -74,7 +74,7 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 	```
 - Change the directory to diucms (if not in it).
 	```
-	cd diucms
+	cd diu_cms
 	```
 - Add remote to the Original Repository.
 	```
