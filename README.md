@@ -1,5 +1,5 @@
 # DIU Counseling Management System (DIUCMS)
-
+Due to some legal perpose, we are moving the codebase to a secure repo. It will be updated after few months. 
 ## Table of contents
 * [Introduction](#introduction)
 * [Status](#status)
