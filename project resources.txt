@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=k5tICunelSU&t=178s
+https://www.youtube.com/watch?v=_zNZ1lK6RTA
+https://www.youtube.com/watch?v=0n41UTkOBb0
+https://www.youtube.com/watch?v=6Hr1bXMIN3Y
+https://www.youtube.com/watch?v=unFGJhIvHU4
+first ref: https://www.youtube.com/watch?v=tytTIoigrd8
+second ref: https://www.youtube.com/watch?v=IEonn27cUfo
+hashing: https://zetcode.com/python/bcrypt/
