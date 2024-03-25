@@ -1,5 +1,5 @@
 # DIU Counseling Management System (DIUCMS)
-Due to some legal perpose, we are moving the codebase to a secure repo. It will be updated after few months. 
+As we are going to launch the project in production, so we moved the codebase to a private repo. For showcasing perpose I am adding a youtube link where i demonastare the project. (thank you) YT: 
 ## Table of contents
 * [Introduction](#introduction)
 * [Status](#status)
