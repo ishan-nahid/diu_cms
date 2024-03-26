@@ -1,8 +1,10 @@
 # DIU Counseling Management System (DIUCMS)
 As we are going to launch the project in production, so we moved the codebase to a private repo. For showcasing perpose I am adding Few Screenshots:
 -----------------------------------
+Faculty View
 ![Faculty View](faculty_view.PNG)
 -----------------------------------
+Student View
 ![Student View](student_view.PNG)
 <!--
 ## Table of contents
