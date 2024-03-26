@@ -1,5 +1,7 @@
 # DIU Counseling Management System (DIUCMS)
-As we are going to launch the project in production, so we moved the codebase to a private repo. For showcasing perpose I am adding a youtube link where i demonastare the project. (thank you) YT: 
+As we are going to launch the project in production, so we moved the codebase to a private repo. For showcasing perpose I am adding Few Screenshots:
+
+<!--
 ## Table of contents
 * [Introduction](#introduction)
 * [Status](#status)
@@ -130,6 +132,7 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 ## Contributors
 <!-- [![contributors](https://contrib.rocks/image?repo=ishan-nahid/diu_cms)](https://github.com/ishan-nahid/diu_cms/graphs/contributors) -->
 <!-- [![](https://opencollective.com/ishan-nahid/diu_cms/contributors.svg?width=890&button=false)](https://github.com/ishan-nahid/diu_cms/graphs/contributors) -->
+<!--
 [![ISHAN AHMAD](https://github.com/ishan-nahid.png?size=70)](https://github.com/ishan-nahid)
 [![ATIQUE SHAHRIAR](https://github.com/atiqueshahriar.png?size=70)](https://github.com/atiqueshahriar)
 [![Faiyaz Rafid](https://github.com/faiyaz666.png?size=70)](https://github.com/faiyaz666)
@@ -142,3 +145,4 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 <div align="center">
    <h3>Show some ❤️ by starring this awesome repository!</h3>
 </div>
+-->
