@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="cover">
+            <div><img src="{% static 'diu-logo.png' %}" alt=""></div>
+            <div>
+                <h1>STUDENT COUNSELING MANAGEMENT SYSTEM</h1>
+            </div>
+        </div>
+
+
+        <div class=" forms">
+            <div class="login-form">
+                <div class="title">Login</div>
+                <form action="#" class="login_form" method="post">
+                    {% csrf_token %}
+                    <div class="input-boxes">
+
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Enter Your E-mail" name="email" required>
+                        </div>
+
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Enter Password" name="password" required>
+                        </div>
+
+                        <div class="text"><a href="#">Forgot password?</a></div>
+
+                        <div class="input-box">
+                            <button type="submit">Login</button>
+                        </div>
+
+                        <div class="text sign-up-text">Don't have an account?
+                            <a href="http://localhost:8000/sign_up/">Sign Up Now</a>
+                        </div>
+                    </div>
+
+
+                    {% if form.errors %}
+                    <div class="error">
+                        <ul>
+                            {% for field, errors in form.errors.items %}
+                            {% for error in errors %}
+                            <li><strong>{{ field }}:</strong> {{ error }}</li>
+                            {% endfor %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+
+                </form>
+            </div>
+        </div>
+        <center>
+            {% if form.errors %}
+            <div class="error">
+                <strong>{{ form.errors }}</strong>
+            </div>
+            {% endif %}
+        </center>
+    </div>
+
+
+</body>
+
+</html>

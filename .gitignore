@@ -1,0 +1,16 @@
+virtenv/
+diagrams/
+.vscode/* 
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
+!.vscode/extensions.json 
+.history
+.env 
+.venv
+*.log
+*.pot
+*.pyc
+__pycache__
+*.bak
+specifications_and_commands.txt

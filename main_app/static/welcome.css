@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        0deg,
+        rgba(33, 24, 54, 0.8),
+        rgba(33, 24, 54, 0.8)
+      ),
+      url("back-cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  input {
+    color: #fff;
+    background: #008152;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+  }
+  

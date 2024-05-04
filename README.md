@@ -1,6 +1,7 @@
 # DIU Counseling Management System (DIUCMS)
-As we are going to launch the project in production, so we moved the codebase to a private repo. For showcasing perpose I am adding Few Screenshots:
------------------------------------
+<!--
+https://drive.google.com/drive/folders/1zn3FHfvOC1cgxmIIpqXJZ7tiG3CSlqdq?usp=sharing
+-->
 ### Faculty View
 ![Faculty View](faculty_view.PNG)
 -----------------------------------
@@ -8,7 +9,7 @@ As we are going to launch the project in production, so we moved the codebase to
 -----------------------------------
 ### Student View
 ![Student View](student_view.PNG)
-<!--
+
 ## Table of contents
 * [Introduction](#introduction)
 * [Status](#status)
@@ -136,10 +137,9 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 </a>
 </div>	-->
 
-
+## Contributors
 <!-- [![contributors](https://contrib.rocks/image?repo=ishan-nahid/diu_cms)](https://github.com/ishan-nahid/diu_cms/graphs/contributors) -->
 <!-- [![](https://opencollective.com/ishan-nahid/diu_cms/contributors.svg?width=890&button=false)](https://github.com/ishan-nahid/diu_cms/graphs/contributors) -->
-<!--## Contributors
 [![ISHAN AHMAD](https://github.com/ishan-nahid.png?size=70)](https://github.com/ishan-nahid)
 [![ATIQUE SHAHRIAR](https://github.com/atiqueshahriar.png?size=70)](https://github.com/atiqueshahriar)
 [![Faiyaz Rafid](https://github.com/faiyaz666.png?size=70)](https://github.com/faiyaz666)
@@ -152,4 +152,3 @@ This project, DIUCMS (DIU Counseling Management System), is a Django-based web a
 <div align="center">
    <h3>Show some ❤️ by starring this awesome repository!</h3>
 </div>
--->
